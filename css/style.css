@@ -1,0 +1,301 @@
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Rubik:300,400,500,700,900');
+
+  * {
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+      text-shadow: rgba(0, 0, 0, .01) 0 0 1px
+  }
+ 
+  body {
+      font-family: 'Rubik', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      background:rgb(215, 226, 233);
+      color: #000000
+  }
+ 
+  div {
+      display: block;
+      position: relative;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box
+  }
+ 
+ 
+  
+ 
+  .bbb_viewed {
+      padding-top: 51px;
+      padding-bottom: 60px;
+      background: #eff6fa
+  }
+ 
+  .bbb_main_container{
+          background-color: #fff;
+     padding: 11px;
+  }
+ 
+  .bbb_viewed_title_container {
+      border-bottom: solid 1px #dadada
+  }
+ 
+  .bbb_viewed_title {
+          margin-bottom: 16px;
+     margin-top: 8px;
+ 
+  }
+ 
+  .bbb_viewed_nav_container {
+      position: absolute;
+      right: -5px;
+      bottom: 14px
+  }
+ 
+  .bbb_viewed_nav {
+      display: inline-block;
+      cursor: pointer
+  }
+ 
+  .bbb_viewed_nav i {
+      color: #dadada;
+      font-size: 18px;
+      padding: 5px;
+      -webkit-transition: all 200ms ease;
+      -moz-transition: all 200ms ease;
+      -ms-transition: all 200ms ease;
+      -o-transition: all 200ms ease;
+      transition: all 200ms ease
+  }
+ 
+  .bbb_viewed_nav:hover i {
+      color: #606264
+  }
+ 
+  .bbb_viewed_prev {
+      margin-right: 15px
+  }
+ 
+  .bbb_viewed_slider_container {
+      padding-top: 13px;
+  }
+ 
+  .bbb_viewed_item {
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 2px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      padding-left: 30px;
+      padding-right: 30px
+  }
+ 
+  .bbb_viewed_image {
+          width: 150px;
+     height: 150px;
+  }
+ 
+  .bbb_viewed_image img {
+      display: block;
+      max-width: 100%
+  }
+ 
+  .bbb_viewed_content {
+      width: 100%;
+      margin-top: 25px
+  }
+ 
+  .bbb_viewed_price {
+      font-size: 16px;
+      color: #000000;
+      font-weight: 500
+  }
+ 
+  .bbb_viewed_item.discount .bbb_viewed_price {
+      color: #df3b3b
+  }
+ 
+  .bbb_viewed_price span {
+      position: relative;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.6);
+      margin-left: 8px
+  }
+ 
+  .bbb_viewed_price span::after {
+      display: block;
+      position: absolute;
+      top: 6px;
+      left: -2px;
+      width: calc(100% + 4px);
+      height: 1px;
+      background: #8d8d8d;
+      content: ''
+  }
+ 
+  .bbb_viewed_name {
+      margin-top: 3px
+  }
+ 
+  .bbb_viewed_name a {
+      font-size: 14px;
+      color: #000000;
+      -webkit-transition: all 200ms ease;
+      -moz-transition: all 200ms ease;
+      -ms-transition: all 200ms ease;
+      -o-transition: all 200ms ease;
+      transition: all 200ms ease
+  }
+ 
+  .bbb_viewed_name a:hover {
+      color: #0e8ce4
+  }
+ 
+  .item_marks {
+      position: absolute;
+      top: 18px;
+      left: 18px
+  }
+ 
+  .item_mark {
+      display: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: #FFFFFF;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 36px;
+      text-align: center
+  }
+ 
+  .item_discount { 
+      background: #df3b3b;
+      margin-right: 5px
+  }
+ 
+  .item_new {
+      background: #0e8ce4
+  }
+ 
+  .bbb_viewed_item.discount .item_discount {
+      display: inline-block
+  }
+ 
+  .bbb_viewed_item.is_new .item_new {
+      display: inline-block
+  }
+  .img-responsive{
+    height: 250px;
+    width: 100%;
+    padding: 15px;
+  }
+  h4{
+    text-align: center;
+  }
+  .wrapper{
+    background-color: white;
+  }
+  .hyper1{
+    text-align:center;
+  }
+  .hyper2{
+    text-align:center;
+  }
+  .hyper3{
+    text-align:center;
+  }
+  .hyper4{
+    text-align:center;
+  }
+  .back{
+    background-color:#394d64 ;
+    color:white;
+    text-align: center;
+    font-size: 18px;
+    padding:10px;
+  }
+  .footer-container{
+    height: 310px;
+    background-color:#232F3E ;
+    color:white;
+    display:grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    padding: 20px;
+  }
+  .footer-title{
+    font-size:15px;
+    font-weight:bold;
+    margin-bottom:10px;
+  }
+  .footer-title~div{
+    margin-bottom: 12px;
+  }
+  .ad{
+    position:relative;
+    height: 330px;
+    padding: 17px;
+    width: 60%;
+    left: 250px;
+  }
+  
+  h2{
+    position: relative;
+    left:5px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
